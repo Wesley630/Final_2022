@@ -26,6 +26,19 @@ A new  preventative vaccine (covid921) is under test in clinical trials. Given t
 
 ## Males
 
+```{r}
+Males_data <- filter(FinalData, sex == "M")
+```
+
+```{r}
+barchartGC(~infected + treatment,data=Males_data)
+barchartGC(~infected + treatment,data=Males_data , type="percent", main = ("Infected vs Treatment"))
+```
+
+The barplots displayed above depict male cases from clinical trials. Blue bars represent males who received a placebo or imitation medication, while pink bars signify those who were administered a vaccine or potent medication. The first bar chart, labeled with 'frequency' on the y-axis, conveys the number of individuals in specific categories within the entire dataset. Meanwhile, the second chart, marked with 'percent' on the y-axis, illustrates the effectiveness rate of these treatments over a recurring time frame or within a given sample.
+
+In this particular dataset, blue bars are situated above the pink bars at roughly 70% and 50%. Conversely, pink bars are either below or on par with the blue bars, hovering around 30% and 50%.
+
 
 ## Females
 
