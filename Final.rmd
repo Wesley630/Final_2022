@@ -62,7 +62,21 @@ malesfish
 
 The primary focus of our analysis is the Fisher's Exact test. In this case, the test results show a p-value of 2e-12, an alternative hypothesis stating that the true odds ratio is not equal to 1, a 95% confidence interval ranging from 1.7 to 2.8, and sample estimates with an odds ratio of 2.2. Based on these findings, we can conclude that there is no association between the treatment's effectiveness across the monitored subpopulation, as the p-value is smaller than the significance threshold of 0.05.
 
+## Effectiveness Confidence Interval 'r low' to 'r hi'
 
+```{r}
+effect <- malesfish$p.value/(malesfish$p.value +1)
+effectivenessmales = malesfish$estimate/(malesfish$estimate +1)*100
+print(effectivenessmales)
+```
+
+```{r}
+low=(malesfish$conf.int[1]/(malesfish$conf.int[1] +1))*100
+hi=(malesfish$conf.int[2]/(malesfish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+The odds ratio represents the efficacy of the vaccine administered to a group of males based on 18,125 observations. While the probability of the vaccine being effective for males is 69, there isn't sufficient evidence to support this outcome. This conclusion is drawn by considering the earlier barplot, numerical results, and the inferential Fisher's Exact Test for Count Data.
 
 ## Females
 
