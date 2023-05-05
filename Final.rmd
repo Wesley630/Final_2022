@@ -90,6 +90,17 @@ barchartGC(~infected + treatment,data=females_data , type="percent", main = ("In
 
 The barplots above showcase female cases from clinical trials. Although the outcomes for females differ from those for males, there are still distinct groups of females who are either sick or healthy. In these barplots, blue bars represent females who received a placebo or imitation medication, while pink bars signify females who were administered a vaccine or potent medication. On the left, the chart shows those who still contracted COVID-19 despite the treatment, while on the right, it displays those who were successfully protected against the virus.
 
+### Numerical results
+```{r}
+table1 <- xtabs(~infected + treatment, data=females_data)
+rowPerc(table1)
+colPerc(table1)
+```
+
+The numerical data for females present the statistical outcomes for infected (vaccinated), infected (unvaccinated), healthy (vaccinated), and healthy (unvaccinated) individuals. In the first table, among 100 sick females, 43 experienced a placebo effect, and 57 received a vaccine. In the same group, 50 placebo and 50 vaccine females were deemed healthy. The second table outlines the trial results.
+
+The probability of a positive COVID-19 test for those undergoing a placebo treatment is 1.7, while for those receiving the vaccine, the likelihood increases to 2.3. As for patients with negative test results, the percentages for those under placebo and vaccine conditions are 98.3 and 97.7, respectively. Interestingly, in this specific dataset, more females were protected after experiencing a placebo effect, making the vaccine appear less valuable compared to the placebo.
+
 
 ## LGBTQ
 
