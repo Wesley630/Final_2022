@@ -113,6 +113,23 @@ femalesfish
 
 Similar to the male results, we can analyze the Fisher's Exact test to gain insight into the effectiveness of treatments across the female subpopulation. The test results indicate a p-value of 0.005, an alternative hypothesis stating that the true odds ratio is not equal to 1, and a 95% confidence interval ranging from 0.60 to 0.92. The sample estimates indicate an odds ratio of 0.74. Based on these results, we can assume that there is also no association between the effectiveness of treatments across the female subpopulation that was monitored.
 
+
+## Effectiveness Confidence Interval 'r low' to 'r hi'
+```{r}
+effect <- femalesfish$p.value/(femalesfish$p.value +1)
+effectivenessfemales = femalesfish$estimate/(femalesfish$estimate +1)*100
+print(effectivenessfemales)
+```
+
+```{r}
+low=(femalesfish$conf.int[1]/(femalesfish$conf.int[1] +1))*100
+hi=(femalesfish$conf.int[2]/(femalesfish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+
+Typically, an odds ratio indicates a strong association, but since the odds ratio for females is smaller than that for males, there is a possibility that the vaccine may not be as effective for females. Thus, it seems that there may not be a significant association between the effectiveness of the treatment across the COVID-19 virus for females. For example, the analysis of female results has demonstrated that there is no clear association in effectively preventing COVID-19 for females.
+
 ## LGBTQ
 
 
