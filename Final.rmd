@@ -79,6 +79,16 @@ options(digits=2)
 The odds ratio represents the efficacy of the vaccine administered to a group of males based on 18,125 observations. While the probability of the vaccine being effective for males is 69, there isn't sufficient evidence to support this outcome. This conclusion is drawn by considering the earlier barplot, numerical results, and the inferential Fisher's Exact Test for Count Data.
 
 ## Females
+```{r}
+females_data <- filter(FinalData, sex == "F")
+```
+
+```{r}
+barchartGC(~infected + treatment,data=females_data)
+barchartGC(~infected + treatment,data=females_data , type="percent", main = ("Infected vs Treatment"))
+```
+
+The barplots above showcase female cases from clinical trials. Although the outcomes for females differ from those for males, there are still distinct groups of females who are either sick or healthy. In these barplots, blue bars represent females who received a placebo or imitation medication, while pink bars signify females who were administered a vaccine or potent medication. On the left, the chart shows those who still contracted COVID-19 despite the treatment, while on the right, it displays those who were successfully protected against the virus.
 
 
 ## LGBTQ
