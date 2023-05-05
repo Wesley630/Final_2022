@@ -102,6 +102,17 @@ The numerical data for females present the statistical outcomes for infected (va
 The probability of a positive COVID-19 test for those undergoing a placebo treatment is 1.7, while for those receiving the vaccine, the likelihood increases to 2.3. As for patients with negative test results, the percentages for those under placebo and vaccine conditions are 98.3 and 97.7, respectively. Interestingly, in this specific dataset, more females were protected after experiencing a placebo effect, making the vaccine appear less valuable compared to the placebo.
 
 
+### Inferential 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+femalesfish <- fisher.test(table1)
+femalesfish
+```
+
+Similar to the male results, we can analyze the Fisher's Exact test to gain insight into the effectiveness of treatments across the female subpopulation. The test results indicate a p-value of 0.005, an alternative hypothesis stating that the true odds ratio is not equal to 1, and a 95% confidence interval ranging from 0.60 to 0.92. The sample estimates indicate an odds ratio of 0.74. Based on these results, we can assume that there is also no association between the effectiveness of treatments across the female subpopulation that was monitored.
+
 ## LGBTQ
 
 
