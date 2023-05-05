@@ -39,6 +39,16 @@ The barplots displayed above depict male cases from clinical trials. Blue bars r
 
 In this particular dataset, blue bars are situated above the pink bars at roughly 70% and 50%. Conversely, pink bars are either below or on par with the blue bars, hovering around 30% and 50%.
 
+### Numerical results
+```{r}
+table1 <- xtabs(~infected + treatment, data=Males_data)
+rowPerc(table1)
+colPerc(table1)
+```
+
+The numerical data for males presented in the tables show the statistical outcomes for individuals who are infected, healthy, and either vaccinated or not vaccinated. In the first table, out of 100 males, 68 who are ill receive a placebo or imitation medication, while 32 are given a vaccine. The second table outlines the results from the trial.
+
+The likelihood of a positive COVID-19 test for those receiving a placebo is 2.7, while for those receiving the vaccine, the probability drops to 1.2. As for patients with negative test results, the percentages for those under placebo and vaccine conditions are 97.3 and 98.8, respectively. Based on this data, men who have been vaccinated are at a lower risk compared to those who have not received the vaccine.
 
 ## Females
 
