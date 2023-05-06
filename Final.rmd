@@ -222,6 +222,21 @@ druggiesfish
 
 The results of the Fisher's Exact test in the case of drug-using individuals show a p-value of 3e-07, an alternative hypothesis stating that the true odds ratio is not equal to 1, and a 95% confidence interval ranging from 0.094 to 0.418. The sample estimates indicate an odds ratio of 0.21. These values provide a representation of the count for drug-using individuals in the clinical trial data.
 
+## Effectiveness Confidence Interval 'r low' to 'r hi'
+
+```{r}
+effect <- druggiesfish$p.value/(druggiesfish$p.value +1)
+effectivenessdruggies = druggiesfish$estimate/(druggiesfish$estimate +1)*100
+print(effectivenessdruggies)
+```
+```{r}
+low=(druggiesfish$conf.int[1]/(druggiesfish$conf.int[1] +1))*100
+hi=(druggiesfish$conf.int[2]/(druggiesfish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+
+Typically, an odds ratio indicates a strong association. However, in this case, since the odds ratio is 0.21, it is smaller than the previous odds ratios. This indicates that the vaccine had a relatively low effectiveness rate in preventing COVID-19 for drug users.
 
 
 # Overall Results and Conclusions
