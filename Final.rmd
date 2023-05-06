@@ -144,7 +144,16 @@ barchartGC(~infected + treatment,data=LGBTQ_data , type="percent", main = ("Infe
 
 The above barplots illustrate the percentage of LGBTQ individuals who were infected with COVID-19 and those who were healthy. Pink bars represent those who received the vaccine, while blue bars signify those who received the placebo. Notably, there was a significantly higher number of COVID-19 patients who received the vaccine than those who received the placebo. Additionally, there were slightly more patients who were healthy and received the vaccine compared to those who received the placebo.
 
+### Numerical results
+```{r}
+table1 <- xtabs(~infected + treatment, data=LGBTQ_data)
+rowPerc(table1)
+colPerc(table1)
+```
 
+The numerical data for LGBTQ individuals presents the statistical outcomes for infected, healthy, and vaccinated or unvaccinated individuals. In the first table, out of 100 individuals who were sick, 13 experienced a placebo effect, while 87 were given a vaccine. Among the same group, 49 individuals received a placebo, while 51 individuals received the vaccine and were deemed healthy. The second table outlines the results for COVID-19 and healthy individuals for those who received the placebo and those who received the vaccine.
+
+According to this data, individuals were not fully protected as there was still a 3.3 chance of contracting COVID-19 even after receiving the vaccine. Specifically, the probability of contracting COVID-19 after receiving the placebo was 0.54, whereas the chance for the vaccine was 3.3. Additionally, the percentage of healthy individuals after receiving the placebo was 99.46, while for the vaccine, the rate was 96.7.
 
 ## Druggies
 
