@@ -155,6 +155,19 @@ The numerical data for LGBTQ individuals presents the statistical outcomes for i
 
 According to this data, individuals were not fully protected as there was still a 3.3 chance of contracting COVID-19 even after receiving the vaccine. Specifically, the probability of contracting COVID-19 after receiving the placebo was 0.54, whereas the chance for the vaccine was 3.3. Additionally, the percentage of healthy individuals after receiving the placebo was 99.46, while for the vaccine, the rate was 96.7.
 
+### Inferential 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+LGBTQfish <- fisher.test(table1)
+LGBTQfish
+```   
+
+The results of the Fisher's Exact test in the case of LGBTQ individuals show a p-value of 1e-08, an alternative hypothesis stating that the true odds ratio is not equal to 1, and a 95% confidence interval ranging from 0.066 to 0.344. The sample estimates indicate an odds ratio of 0.16. Therefore, we can also assume that there is no clear association between the effectiveness of the vaccine across the variety of subpopulations that were monitored.
+
+Furthermore, the chance that the vaccine was effective in protecting LGBTQ individuals from COVID-19 is slightly lower than the probability for the vaccine's effectiveness in protecting males from COVID-19, with the LGBTQ value at 13.9 and the males value at 17.2. Based on these findings, the vaccine may not be effective in future clinical trials for both LGBTQ and male individuals.
+
 ## Druggies
 
 
