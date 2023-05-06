@@ -210,6 +210,18 @@ The numerical data for drug-using individuals presents the statistical outcomes 
 
 According to this data, the vaccine was not effective for COVID-19 patients, but it was more effective for individuals who tested negative. Specifically, the probability of contracting COVID-19 after receiving the placebo was 0.81, whereas the chance for the vaccine was 3.8. Additionally, the percentage of healthy individuals after receiving the placebo was 99.19, while for the vaccine, the rate was 96.2.
 
+### Inferential 
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+druggiesfish <- fisher.test(table1)
+druggiesfish
+``` 
+
+The results of the Fisher's Exact test in the case of drug-using individuals show a p-value of 3e-07, an alternative hypothesis stating that the true odds ratio is not equal to 1, and a 95% confidence interval ranging from 0.094 to 0.418. The sample estimates indicate an odds ratio of 0.21. These values provide a representation of the count for drug-using individuals in the clinical trial data.
+
 
 
 # Overall Results and Conclusions
