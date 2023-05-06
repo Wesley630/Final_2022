@@ -240,3 +240,14 @@ Typically, an odds ratio indicates a strong association. However, in this case, 
 
 
 # Overall Results and Conclusions
+
+
+After investigating the trials for a new preventative vaccine, it was found that the null hypothesis was that the vaccine was effective in preventing COVID-19 infections across a variety of subpopulations tracked, while the alternative hypothesis was that the vaccine exhibited different effectiveness across the variety of subpopulations.
+
+Upon analyzing the Fisher's Exact Test for the male Count Data, it was found that the vaccine was not effective, and therefore, the null hypothesis was rejected, while the alternative hypothesis was accepted. Further investigation of every subpopulation resulted in the rejection of the null hypothesis and acceptance of the alternative hypothesis, as there was strong evidence supporting it in all the models.
+
+The P-values for each subpopulation tracked were as follows: male P-value was 2e-12, female P-value was 0.005, LGBTQ P-value was 1e-08, and drug user P-value was 3e-07. A statistically significant test result (P ≤ 0.05) indicates that the test hypothesis is false and should be rejected. In this case, the P-value for each subpopulation was significantly small, and less than the 0.05 significant result. As a result, the vaccine cannot be recommended based on the clinical trials conducted.
+
+
+
+
