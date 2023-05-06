@@ -185,6 +185,24 @@ An odds ratio typically indicates a strong association, but in this case, since 
 
 
 ## Druggies
+```{r}
+druggies_data <- filter(FinalData, DrugUser == "yes")
+```
+
+```{r}
+barchartGC(~infected + treatment,data=druggies_data)
+barchartGC(~infected + treatment,data=druggies_data , type="percent", main = ("Infected vs Treatment"))
+```
+
+
+The above barplots illustrate the percentage of drug-using individuals who were infected with COVID-19 and those who were healthy. Pink bars represent those who received the vaccine, while blue bars signify those who received the placebo. Notably, there was a significantly higher number of COVID-19 patients who received the vaccine compared to those who received the placebo. Additionally, there were slightly more patients who were healthy and received the vaccine compared to those who received the placebo.
+
+
+
+
+
+
+
 
 
 # Overall Results and Conclusions
