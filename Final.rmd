@@ -168,6 +168,22 @@ The results of the Fisher's Exact test in the case of LGBTQ individuals show a p
 
 Furthermore, the chance that the vaccine was effective in protecting LGBTQ individuals from COVID-19 is slightly lower than the probability for the vaccine's effectiveness in protecting males from COVID-19, with the LGBTQ value at 13.9 and the males value at 17.2. Based on these findings, the vaccine may not be effective in future clinical trials for both LGBTQ and male individuals.
 
+## Effectiveness Confidence Interval 'r low' to 'r hi'
+```{r}
+effect <- LGBTQfish$p.value/(LGBTQfish$p.value +1)
+effectivenessLGBTQ = LGBTQfish$estimate/(LGBTQfish$estimate +1)*100
+print(effectivenessLGBTQ)
+```
+
+```{r}
+low=(LGBTQfish$conf.int[1]/(LGBTQfish$conf.int[1] +1))*100
+hi=(LGBTQfish$conf.int[2]/(LGBTQfish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+An odds ratio typically indicates a strong association, but in this case, since the odds ratio is 0.16, the probability is small, or not likely. Therefore, it seems that there is no significant association between the vaccine and the LGBTQ analysis.
+
+
 ## Druggies
 
 
